@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- <a href="stylistpiazza://app/profile/123456">Click Me</a> -->
+
+    </div>
+</body>
+
+<script>
+    const container = document.getElementById('container')
+
+    const anchorTag = document.createElement('a');
+
+    const id = new URLSearchParams(window.location.search).get('s')
+
+    anchorTag.href = `stylistpiazza://app/profile/${id}`
+
+    anchorTag.textContent = 'Click me'
+    // const values = 
+    container.appendChild(anchorTag)
+</script>
+
+</html>
